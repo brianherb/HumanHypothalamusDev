@@ -1,3 +1,4 @@
+library(Seurat)
 
 flexsplit <- function(dat,char){
 test=strsplit(as.character(dat),char,fixed=TRUE)
