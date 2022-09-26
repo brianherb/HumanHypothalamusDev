@@ -2,7 +2,7 @@ Single-cell genomics reveals region-specific developmental trajectories underlyi
 
 Code in this repository emcompases the analysis performed for the manuscript "Single-cell genomics reveals region-specific developmental trajectories underlying neuronal diversity in the prenatal human hypothalamus"
 
-The scripts follow the following order:
+The scripts follow the order presented in the manuscript:
 
 environment_droplet.yml - Conda yml file - can be used to recreate conda environment used in this analysis
 
