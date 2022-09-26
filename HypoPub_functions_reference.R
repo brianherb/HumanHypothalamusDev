@@ -70,6 +70,25 @@ tmp2 = tmp[which(tmp<=length(tree$tip.label))]
 return(tmp2)
 }
 
+plotBulkHeatmap <- function(sobj = sobj,genes = genes){
+  combined.tmp <- ScaleData(sobj, features = genes)
+  x <- intersect(genes, rownames(GetAssayData(combined.tmp, slot = 'data')))
+  mat <- AverageExpression(combined.tmp, features = x, slot = 'data')
+  mat1 <- mat$RNA
+  re <- pheatmap::pheatmap(mat1,color=colorRampPalette(brewer.pal(n = 7, name =
+  "YlOrRd"))(100),angle_col = 45,  border = NA,cluster_col=FALSE,cluster_row=FALSE)
+  return(re)
+}
+
+## slot was scale.data
+
+plotBulkHeatmap2 <- function(sobj = sobj,genes = genes){
+  x <- intersect(genes, rownames(GetAssayData(sobj, slot = 'data')))
+  mat <- AverageExpression(sobj, features = x, slot = 'data')
+  mat1 <- t(scale(t(mat$RNA)))
+  re <- pheatmap::pheatmap(mat1, angle_col = 45, border = NA)
+  return(re)
+}
 
 ## Hannah
 
