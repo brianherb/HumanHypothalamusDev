@@ -1,6 +1,6 @@
-Single-cell genomics reveals region-specific developmental trajectories underlying neuronal diversity in the prenatal human hypothalamus
+# Single-cell genomics reveals region-specific developmental trajectories underlying neuronal diversity in the prenatal human hypothalamus
 
-Code in this repository emcompases the analysis performed for the manuscript "Single-cell genomics reveals region-specific developmental trajectories underlying neuronal diversity in the prenatal human hypothalamus"
+## Code in this repository emcompases the analysis performed for the manuscript "Single-cell genomics reveals region-specific developmental trajectories underlying neuronal diversity in the prenatal human hypothalamus"
 
 The scripts follow the order presented in the manuscript:
 
