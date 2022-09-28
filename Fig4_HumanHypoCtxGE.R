@@ -553,8 +553,13 @@ AllGE4K.integrated$PseudoBulkGroupsComb = AllGE4K_3D.integrated@meta.data[colnam
 
 AllGE4K.integrated$BrainRegion = AllGE4K_3D.integrated@meta.data[colnames(AllGE4K.integrated),'BrainRegion']
 
+AllGE4K.integrated$Phase = AllGE4K_3D.integrated@meta.data[colnames(AllGE4K.integrated),'Phase']
+
+AllGE4K.integrated$sc3D = AllGE4K_3D.integrated@meta.data[colnames(AllGE4K.integrated),'seurat_clusters']
+
+
 pdf(paste('./TestPlots/All_CtxHyGE_mt10n500_BrainRegions_Groups_2D.pdf',sep=''),width=12,height=8)
-for(j in c("BrainRegion","PseudoBulkGroups","PseudoBulkGroupsComb")){
+for(j in c("BrainRegion","Phase","sc3D","PseudoBulkGroups","PseudoBulkGroupsComb")){
 print(DimPlot(AllGE4K.integrated, reduction = "umap", group.by = j, label = TRUE, repel = TRUE,raster=TRUE,shuffle=TRUE))
 }
 dev.off()
